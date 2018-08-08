@@ -1,0 +1,582 @@
+// variables
+$mobile-screen: 690px;
+$tablet-screen: 995px;
+$desktop-screen: 1440px;
+// media queries
+$phone: "only screen and (max-width : 30em)";
+$tablet: "only screen and (max-width:#{$mobile-screen}) and (max-width: #{$tablet-screen})";
+$medium: "only screen and (min-width: 768px)";
+$large: "only screen and (min-width: 992px)";
+$xlarge: "only screen and (min-width: 1200px)";
+
+// raw code remove styling
+.wpb_raw_code.wpb_content_element.wpb_raw_html {
+    margin-bottom: 0 !important;
+}
+// END raw code remove styling
+
+// images
+.image-container {
+    margin-bottom: 10px;
+    figure {
+        width: 100%;
+        vertical-align: top;
+        margin: 0;
+        border-radius: 5px;
+    }
+    img {
+        border-radius: 4px;
+    }
+}
+// END images
+
+// center text
+.center-text {
+    text-align: center;
+}
+
+// typography
+h1 {
+    margin: 1em 0;
+}
+
+// dotted line
+.dotted-line {
+    border-top: 1px dotted rgb(119, 119, 119);
+    width: 73px;
+    margin: 0px auto;
+    display: block;
+    max-width: 100%;
+    height: 20px;
+}
+
+// blog excerpt box
+.content_block .vc_gitem-zone {
+    background-color: white !important;
+}
+
+// quote icon
+.fa-quote-right:before {
+    margin-right: 42px;
+}
+
+/* proctored schools and added schools list */
+.list-container,
+.icon-title {
+    display: flex;
+}
+
+.list-column {
+    display: flex;
+    flex: 1;
+}
+
+// Page titles
+.content_block .page_title {
+    text-align: left;
+    padding: 0 15px 15px 15px;
+    h1::before {
+        font-size: 1.1em;
+        color: #58595b;
+        font-family: fontAwesome;
+        margin: 0 10px 0 0;
+    }
+}
+
+
+// icon titles
+.icon-title {
+    .icon-container::before, // proctored schools
+    .icon-container.univ::before { //accepted schools
+        font-size: 2em;
+        color: #58595b;
+        line-height: 35px;
+    }
+}
+
+// logo grid
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    @media #{$large} {
+        &.schools img {
+            max-width: 60%;
+        }
+    }
+}
+
+.col-4,
+.col-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-4 {
+    flex: 1 1 45%;
+    margin: 5px;
+}
+
+.col-5 {
+    flex: 1 1 35%;
+    margin: 5px 5px 40px 5px;
+}
+
+@media #{$medium} {
+    .col-4,
+    .col-5 {
+        flex: 1 1 18%;
+    }
+}
+
+// END logo grid
+
+.icon-container {
+    &::before { // proctored schools
+    content: "\f19c";
+        font-family: fontAwesome;
+        color: #a71f23;
+        margin-right: 7px;
+    }
+    &.univ::before { //accepted schools
+        content: "\e900";
+        font-family: 'School' !important;
+        color: #a71f23;
+        margin-right: 7px;
+    }
+    // pencil
+    &.pencil-square-o::before {
+        content: "\f044";
+    }
+}
+
+.list-container li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .list-container {
+        flex-direction: column;
+    }
+    .social-icon-about {
+        display: flex;
+    }
+}
+
+/* END proctored schools and added schools list */
+
+// pre pre footer
+.pre-pre-footer {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px 15px;
+    @media #{$medium} {
+        width: 750px;
+    }
+    @media #{$large} {
+        width: 970px;
+    }
+    @media #{$xlarge} {
+        width: 1200px;
+    }
+}
+// END pre pre footer
+
+// // YELP PLUGIN // //
+
+.wpac.wp-yrw {
+
+    font-family: "Raleway" !important;
+
+    .wp-yelp-list,
+    .wp-yelp-reviews,
+    .wp-yelp-place,
+    .wp-yelp-content-inner {
+        display: flex;
+    }
+
+    .wp-yelp-list {
+        @media #{$tablet} {
+            flex-direction: column;
+        }
+    }
+    .wp-yelp-place { // info column
+        flex-grow: 1;
+        .wp-yelp-left {
+            display: none !important; // hide the alma mater image icon
+        }
+    }
+
+    .wp-yelp-list .wp-yelp-reviews {
+        @media #{$tablet} {
+          flex-direction: column;
+        }
+        @media #{$medium} {
+          flex-direction: row;
+        }
+        .wp-yelp-name {
+            color: #a71f23 !important;
+        }
+    }
+
+    .wp-yelp-content-inner {
+        flex-grow: 2;
+        .wp-yelp-stars {
+            @media #{$medium}{
+                display: block;
+            }
+        }
+    }
+
+}
+// END .wpac
+// // END YELP PLUGIN // //
+
+// yelp testimonials
+.testimonials-container .vc_row:nth-child(even) {
+    .fa-quote-left:before {
+        content: url(/wp-content/uploads/2018/08/yelp_socialnetwork_19999.png);
+    }
+    .testimonials_photo i {
+            background-color: white;
+    }
+}
+@media only screen and (max-width: 995px) {
+.testimonials-container .vc_row:nth-child(even) .testimonials_list.items2 li {
+    width: 100%;
+}
+}
+// footer
+.social-footer {
+    margin-bottom: 20px;
+    .Defaults-linkedin-square,
+    .Defaults-facebook-square {
+        font-size: 2em;
+    }
+}
+
+// services page info circle
+
+.icon-circle-list + .info-c-full {
+    min-height: 65%;
+    margin: 19% 25%;
+    border-radius: 0;
+    padding: 0;
+}
+
+
+// END services page info circle
+
+
+////////////////////////////////////////////// OLD CODE BELOW
+
+// /social icons
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner {
+    width: 1em;
+    height: 1em;
+}
+
+header nav ul.menu > li > a {
+	font-weight: 500!important
+}
+
+.main_header.type1 {
+    header nav {
+        ul.menu > li.current-menu-item > a,
+        ul.menu > li.current-menu-parent > a,
+        ul.menu > li.current-menu-ancestor {
+            background: none!important;
+        	color: #b22d1e!important;
+        	font-weight: 600!important
+        }
+    }
+}
+
+// .main_header.type1 header nav ul.menu > li.current-menu-item > a,
+// .main_header.type1 header nav ul.menu > li.current-menu-parent > a,
+// .main_header.type1 header nav ul.menu > li.current-menu-ancestor > a {
+// 	background: none!important;
+// 	color: #b22d1e!important;
+// 	font-weight: 600!important
+// }
+
+.fixed-menu header nav ul.menu > li.current-menu-item > a,
+.fixed-menu header nav ul.menu > li.current-menu-parent > a {
+	background: none!important;
+	color: #A72F23!important;
+	font-weight: 600!important
+}
+.logo img,
+.logo {
+	margin-left: 0
+}
+header nav ul.menu > li > a {
+	letter-spacing: .25px
+}
+.main_header,
+.header_parent_wrap header,
+.top_search form input[type="text"],
+.fixed-menu header {
+	border-bottom: #b22d1e solid 2px
+}
+#page_container .wrapper {
+    padding: 0 0 1em 0;
+}
+
+.slotholder {
+	padding-top: 0
+}
+.ultb3-box {
+	margin-top: 24px
+}
+.content_block .ultb3-desc {
+	margin-bottom: 0!important
+}
+.flex-caption a.link_image {
+	font-size: large
+}
+.flex-caption h2.post-title {
+	margin-bottom: 0
+}
+.wpb_column.vc_column_container.vc_col-sm-9 h3 {
+	color: #b22d1e
+}
+.listing_meta {
+	font-size: 18px!important
+}
+.listing_meta span.author {
+	display: none
+}
+.listing_meta span.category {
+	display: none;
+	display: none
+}
+.listing_meta span:nth-of-type(2n) {
+	display: none
+}
+.listing_meta span:after {
+	content: no-close-quote!important
+}
+#comments {
+	display: none
+}
+.shortcode_button.btn_type5 {
+	background: #b22d1e;
+	border-color: #b22d1e
+}
+.academicTutoring:hover .Defaults-check-square-o {
+	color: #A71F23
+}
+.collegeCounseling:hover .Defaults-bank {
+	color: #5D9842
+}
+.proctorServices:hover .Defaults-eye {
+	color: #FEBE2D
+}
+.academicTutoring:hover .ult_pricing_heading {
+	background-color: #A71F23!important
+}
+.collegeCounseling:hover .ult_pricing_heading {
+	background-color: #5D9842!important
+}
+.proctorServices:hover .ult_pricing_heading {
+	background-color: #FEBE2D!important
+}
+.acceptedSchoolsRow {
+	margin-bottom: 0!important
+}
+.acceptedSchools {
+	margin-bottom: 0!important
+}
+.icon_description {
+	margin: 0!important
+}
+.smile_icon_list_wrap,
+.wpb_row .wpb_column .wpb_wrapper .smile_icon_list_wrap {
+	margin-bottom: 0!important
+}
+.ult_cl_link_10 a span.ult_btn10_span {
+	border-radius: 4px!important
+}
+.footer {
+	border-top: #b22d1e solid 3px
+}
+.howitworks .ult_pricing_heading {
+	padding: 15px 0 0!important
+}
+.howitworks .ult_price_body_block {
+	background: none!important;
+	margin-top: -7px
+}
+.widget_nav_menu ul li,
+.widget_archive ul li,
+.widget_pages ul li,
+.widget_categories ul li,
+.widget_recent_entries ul li,
+.widget_recent_comments ul li,
+.widget_meta ul li {
+	padding: 0 0 6.5px!important
+}
+.widget_nav_menu ul li a:after,
+.widget_archive ul li a:after,
+.widget_pages ul li a:after,
+.widget_categories ul li a:after,
+.widget_recent_entries ul li a:after,
+.widget_meta ul li a:after {
+	content: none!important
+}
+.widget_nav_menu ul li a,
+.widget_archive ul li a,
+.widget_pages ul li a,
+.widget_categories ul li a,
+.widget_recent_entries ul li a,
+.widget_meta ul li a {
+	padding: 0!important
+}
+.footer_bottom {
+	padding: 14px 0 10px!important
+}
+.footer_bottom .social_icons {
+	display: none
+}
+.pre_footer .widget_text.contact_text {
+	background: none!important
+}
+table td,
+table th {
+	padding: 7px;
+	border: none!important
+}
+.cooperInstagram.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-left: 0
+}
+.cooperTwitter.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-right: 0
+}
+.content_block .uavc-list-content {
+	margin-bottom: 0!important
+}
+.content_block .vc_gitem-zone {
+	background-color: none!important
+}
+.recent_posts_info {
+	display: none
+}
+.socialMedia {
+	padding-left: 38px!important
+}
+.bio.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-right: 0!important
+}
+.socialIconContainer {
+	padding-left: 0!important
+}
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+	.bio button.ult-align-right {
+		float: none!important
+	}
+	.vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia {
+		margin-left: 55px!important
+	}
+	.socialIconContainer {
+		padding-left: 27px!important
+	}
+	.smile_icon_list .icon_description h3 {
+		color: #fff!important
+	}
+	.ult-new-ib-desc {
+		padding: 9px 23px!important
+	}
+	.ult-new-ib-content {
+		padding-top: 5px!important
+	}
+	.ult-new-ib .ult-new-ib-content p {
+		font-size: 14px!important;
+		line-height: 1.5em!important;
+		font-weight: 400!important
+	}
+	h2.ult-new-ib-title {
+		font-size: 19px!important
+	}
+	.logo img,
+	.logo {
+		margin-left: 0
+	}
+	.wpb_column.vc_column_container.vc_col-sm-12.vc_custom_1447797144871 {
+		padding-bottom: 25px
+	}
+	.wpb_column.vc_column_container.vc_col-sm-9 h3 {
+		margin-top: 18px
+	}
+	.smile_icon_list li .icon_list_icon {
+		width: 2em!important;
+		height: 2em!important;
+		line-height: 2em!important
+	}
+	.info-circle-wrapper .smile_icon_list.left li .icon_description {
+		margin-left: .7em!important
+	}
+	.committedStudents.wpb_column.vc_column_container.vc_col-sm-4 {
+		padding-bottom: 40px
+	}
+	.icon_list_icon.animated.slideInLeft.delay-03 {
+		font-size: 85px!important
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia.vc_custom_1452198271368 {
+		margin-right: 0!important;
+		margin-left: 0!important
+	}
+	.socialMedia {
+		padding-left: 17px!important
+	}
+	.ult-new-ib-desc {
+		padding: 8px 19px!important
+	}
+	.ult-ib-effect-style13 h2 {
+		font-size: 17px!important
+	}
+	.ult-new-ib-content {
+		display: table!important;
+		font-size: 13px!important;
+		padding: 7px 0!important
+	}
+	.info-c-full.cirlce-noicon {
+		width: 85%!important;
+		margin: 17% 0 8% 8% !important
+	}
+	.servicesOverview .info-circle-text {
+		font-size: 13px!important
+	}
+	.servicesOverview h3.info-circle-heading {
+		font-size: 16px!important;
+		line-height: 16px!important
+	}
+	.servicesOverview hr {
+		width: 58%!important
+	}
+	.credits .icon_list_icon.animated.fadeInLeft.delay-03 {
+		width: 2em!important
+	}
+}
+@media only screen and (max-width: 959px) {
+	.main_header .logo_sect img {
+		max-width: 80%!important;
+		height: auto!important
+	}
+}
+@media only screen and (min-width: 1824px) {
+	.tp-bgimg.defaultimg {
+		background-position: 50% 40%!important
+	}
+}

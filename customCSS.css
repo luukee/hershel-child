@@ -1,0 +1,193 @@
+/*links*/
+.Index-page--has-image h2 a {
+    border-bottom: none;
+}
+
+.hide {
+    position: absolute;
+    text-indent: -999px;
+}
+
+/*******
+HOMEPAGE
+*******/
+
+/* home: top text banner */
+.collection-5b189704352f53e06ab378a3 .Index-page:not(.Index-page--has-image) {
+    min-height: 70vh;
+}
+
+/* top landing title */
+.collection-5b189704352f53e06ab378a3 h1 {
+    text-transform: none;
+}
+
+/*home: projects: listed skills */
+.collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h3 {
+    background: black;
+	margin-bottom: 0;
+    color: white;
+    padding: .5em 2.7em;
+    display: table;
+}
+
+/* home: projects: title container */
+.Index-page--has-image>.Index-page-content {
+    bottom: 0;
+    padding-bottom: 3em;
+}
+
+/* home & about : projects: title background */
+.collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h2,
+.collection-5b1b0c1c6d2a73a4cf0759c7 h2 {
+	display: inline-flex;
+  	margin-top: 0;
+  	text-transform: uppercase;
+	background: rgba(255,255,255,.9);
+    padding: .5em;
+    transition-property: background;
+    transition-duration: .5s;
+}
+
+.collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h2 {
+	cursor: pointer;
+}
+
+/* home: projects: title background HOVER */
+.collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h2:hover {
+	background: rgba(255,255,255,1);
+  	color: black;
+}
+
+/* home: projects: title HOVER */
+.collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h2:hover a {
+  	color: black;
+}
+
+/* testimonials list summary */
+.sqs-block-summary-v2 .summary-block-setting-design-list .summary-item {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  	display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/*******
+WORK
+*******/
+/* no underline on links */
+.collection-5b1893961ae6cf93c2399dd4 .sqs-block-image p a {
+      border-bottom-width: 0;
+}
+
+/*******
+PROJECTS
+*******/
+
+/* pagination right title */
+.Index-page div.sqs-col-6:last-child .collectionlink-title {
+    text-align: right;
+}
+/* pagination right + symbol */
+.span-6:last-child .sqs-block-collectionlink .collectionlink-title a::after {
+    content: " +";
+}
+/* pagination left minus symbol */
+.span-6:first-child .sqs-block-collectionlink .collectionlink-title a::before {
+    content: "– ";
+}
+
+/*******
+SITE WIDE BANNER:
+full width and height
+*******/
+
+/* banner container */
+.Index-page-image {
+  position: relative !important;
+}
+
+/* banner image */
+.Index-page-image img {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    left: 0 !important;
+	top: 0px !important;
+}
+
+/* banner inner content */
+.Index-page--has-image > .Index-page-content {
+    position: absolute;
+}
+
+/* banner image container */
+figure.Index-page-image.loaded {
+    margin-bottom: -11px;
+}
+
+/* banner sections without banner */
+.Index-page:not(.Index-page--has-image) {
+    min-height: 50vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* center text blocks */
+.tweak-site-width-option-full-background .Index-page-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+/* for gallery/summary grid repair */
+.sqs-layout {
+    width: 100%;
+}
+
+/*******
+SERVICES
+*******/
+
+/*******
+FOOTER
+*******/
+
+footer p {
+  font-size: 15px;
+}
+
+/*******
+MEDIA QUERIES
+*******/
+@media screen and (max-width: 936px) {
+// work page project titles
+  body:not(.image-block-stack-dynamic-font-sizing) .sqs-block-image .design-layout-stack .image-subtitle p {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 640px) {
+ 	.Index-page--has-image>.Index-page-content {
+    	padding-bottom: 0;
+	}
+  .collection-5b189704352f53e06ab378a3 .Index-page:not(#intro-1) h3 {
+   		display: none !important;
+	}
+    .Index-page:not(.Index-page--has-image) {
+        min-height: 20vh;
+    }
+  body:not(.image-block-stack-dynamic-font-sizing) .sqs-block-image .design-layout-stack .image-subtitle p {
+    font-size: 2em;
+  }
+}
